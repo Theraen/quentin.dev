@@ -5,7 +5,7 @@
 	<title>{% block title %}Bienvenue!{% endblock %}</title>
 	<meta name="description" content="Bolby - Portfolio/CV/Resume HTML Template">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link rel="shortcut icon" type="image/x-icon" href="https://via.placeholder.com/32x32">
+	<link rel="shortcut icon" type="image/x-icon" href="{{asset('images/favicon-32x32.png')}}">
 
     {% block stylesheets %}	
         <!-- STYLESHEETS -->
@@ -88,7 +88,7 @@
 	<!-- logo image -->
 	<div class="site-logo">
 		<a href="index-dark.html">
-			<img src="images/logo.svg" alt="Bolby" />
+			<img src="{{asset('images/logo.png')}}" alt="Bolby" />
 		</a>
 	</div>
 	

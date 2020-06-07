@@ -49,6 +49,11 @@ class Portfolio
      */
     private $technologyPortfolios;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $imageLogo;
+
     public function __construct()
     {
         $this->technologyPortfolios = new ArrayCollection();
@@ -146,6 +151,18 @@ class Portfolio
                 $technologyPortfolio->setPortfolio(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getImageLogo(): ?string
+    {
+        return $this->imageLogo;
+    }
+
+    public function setImageLogo(string $imageLogo): self
+    {
+        $this->imageLogo = $imageLogo;
 
         return $this;
     }
